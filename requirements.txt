@@ -5,5 +5,6 @@
 #
 # The single dependency here is for the OPTIONAL interactive demo (sandbox/app.py)
 # and exists so hosted sandboxes (Streamlit Community Cloud / Hugging Face Spaces)
-# install it automatically.
-streamlit==1.39.0
+# install it automatically. Left unpinned on purpose so the host resolves a build
+# with prebuilt wheels for whatever Python version it runs (3.11–3.14).
+streamlit>=1.40

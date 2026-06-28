@@ -1,3 +1,4 @@
 # Dependencies for the interactive demo only (sandbox/app.py).
 # The ranking engine itself needs none of these.
-streamlit==1.39.0
+# Unpinned so the host picks a build with prebuilt wheels for its Python version.
+streamlit>=1.40
