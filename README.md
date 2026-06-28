@@ -6,7 +6,7 @@ A fast, deterministic, fully-auditable system that ranks the **top-100 candidate
 > ```bash
 > python rank.py --candidates ./candidates.jsonl --out ./submission.csv
 > ```
-> Runs in **~18 seconds on CPU**, **no network**, **no GPU**, **zero third-party dependencies** (Python 3.9+ standard library only). Output passes the official `validate_submission.py`.
+> Runs in **~18 seconds on CPU**, **no network**, **no GPU**. The ranker itself imports **only the Python 3.9+ standard library** — `requirements.txt` lists `streamlit` solely for the optional demo app, not for ranking. Output passes the official `validate_submission.py`.
 
 ---
 

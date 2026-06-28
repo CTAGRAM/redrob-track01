@@ -1,6 +1,9 @@
-# Ranking step (rank.py) — ZERO third-party dependencies.
-# The engine uses only the Python standard library, so the Stage-3 reproduction
-# is guaranteed to run on any CPU-only machine in seconds with no install step,
-# no network, and no GPU. Python 3.9+ is sufficient.
+# IMPORTANT: the ranking step (rank.py) uses ONLY the Python standard library.
+# It needs none of the packages below — `python rank.py` runs on a bare CPU-only
+# Python 3.9+ with no install, no network, and no GPU. That is the Stage-3
+# reproduction path.
 #
-# (Intentionally empty. The optional demo app has its own requirements below.)
+# The single dependency here is for the OPTIONAL interactive demo (sandbox/app.py)
+# and exists so hosted sandboxes (Streamlit Community Cloud / Hugging Face Spaces)
+# install it automatically.
+streamlit==1.39.0
