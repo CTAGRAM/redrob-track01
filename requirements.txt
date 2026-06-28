@@ -1,0 +1,6 @@
+# Ranking step (rank.py) — ZERO third-party dependencies.
+# The engine uses only the Python standard library, so the Stage-3 reproduction
+# is guaranteed to run on any CPU-only machine in seconds with no install step,
+# no network, and no GPU. Python 3.9+ is sufficient.
+#
+# (Intentionally empty. The optional demo app has its own requirements below.)

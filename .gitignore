@@ -1,0 +1,14 @@
+# Never commit the 487 MB candidate pool — it is provided at runtime.
+candidates.jsonl
+candidates.jsonl.gz
+*.jsonl
+!tests/**/*.jsonl
+!sandbox/sample_candidates.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.DS_Store

@@ -1,0 +1,3 @@
+# Dependencies for the interactive demo only (sandbox/app.py).
+# The ranking engine itself needs none of these.
+streamlit==1.39.0

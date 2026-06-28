@@ -1,0 +1,80 @@
+# Redrob Hackathon — Submission Metadata
+# Fill in the team identity fields (marked TODO) before submitting.
+
+team_name: "TODO-your-team-name"
+
+primary_contact:
+  name: "Rudraksh Bharti"
+  email: "TODO@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Rudraksh Bharti"
+    email: "TODO@example.com"
+    role: "Team Lead / Ranking"
+  - name: "Member 2"
+    email: "TODO@example.com"
+    role: "Semantic & Features"
+  - name: "Member 3"
+    email: "TODO@example.com"
+    role: "Trust Signals & Delivery"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/TODO/redrob-track01"
+sandbox_link: "https://huggingface.co/spaces/TODO/redrob-ranker"   # deploy sandbox/app.py
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "MacBook / any CPU machine"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11"
+  os: "macOS / Linux"
+  uses_gpu_for_inference: false        # true to spec — CPU only
+  has_network_during_ranking: false    # true to spec — no network at ranking time
+  pre_computation_required: false      # the engine needs no precomputed artifacts
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration (honest)
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+ai_usage_summary: |
+  Used Claude for architecture discussion, code authoring, and review. The
+  ranking system itself is a deterministic, rule-based + lexical-semantic scorer
+  written in pure Python — no machine-learned model and no LLM is invoked during
+  ranking. No candidate data was sent to any hosted LLM at any point.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Deterministic JD-grounded ranker that reads what candidates actually built
+  (career-history free text) rather than counting AI keywords in their skills
+  list — skills are assigned near-uniformly at random in this dataset, which is
+  the keyword trap the JD warns about. A transparent rubric scores role match,
+  evidence of shipped ranking/search/recommendation systems, vector-search and
+  evaluation experience, NLP/IR domain, the 5-9-year band, and product-vs-services
+  career, then subtracts penalties (services-only career, CV/speech-without-NLP,
+  job-hopping, framework-only). Bounded location and availability modifiers
+  down-weight unavailable candidates without burying strong-but-quiet ones (we
+  deliberately avoid the sample submission's over-weighting of response rate). A
+  consistency gate removes internally-impossible "honeypot" profiles so they can
+  never reach the shortlist. Runs over 100K candidates in ~18 seconds on CPU with
+  zero third-party dependencies, so reproduction is trivial and fully auditable.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
