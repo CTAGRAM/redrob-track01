@@ -22,8 +22,8 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/TODO/redrob-track01"
-sandbox_link: "https://huggingface.co/spaces/TODO/redrob-ranker"   # deploy sandbox/app.py
+github_repo: "https://github.com/CTAGRAM/redrob-track01"
+sandbox_link: "TODO-paste-your-streamlit-app-url"   # from share.streamlit.io, main file = sandbox/app.py
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 # ============================================================================
