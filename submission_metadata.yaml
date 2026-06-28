@@ -23,7 +23,7 @@ team_members:
 # Code and reproducibility
 # ============================================================================
 github_repo: "https://github.com/CTAGRAM/redrob-track01"
-sandbox_link: "TODO-paste-your-streamlit-app-url"   # from share.streamlit.io, main file = sandbox/app.py
+sandbox_link: "https://redrob-track01-zamme3w8lj9uswaz4re3gy.streamlit.app/"
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 # ============================================================================
